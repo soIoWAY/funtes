@@ -5,7 +5,7 @@ const Header = () => {
 	const liStyles =
 		'flex items-center gap-2 hover:text-yellow-400 cursor-pointer transition-all'
 	return (
-		<div className='bg-gray-900 py-5'>
+		<div className='bg-gray-900 py-3'>
 			<div className='flex justify-between items-center w-11/12 m-auto'>
 				<h1 className='text-3xl uppercase text-yellow-400 tracking-wider '>
 					Funtes

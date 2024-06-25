@@ -1,3 +1,4 @@
+import { tests } from '@/content/tests'
 import Image from 'next/image'
 const ActualTests = () => {
 	return (
@@ -17,107 +18,26 @@ const ActualTests = () => {
 			</div>
 			<div className='mt-5 w-full'>
 				<ul className='flex gap-4 flex-wrap '>
-					<li className='bg-gray-900 w-[24%] h-96 rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative'>
-						<Image
-							src='/revolution.jpg'
-							width={350}
-							height={350}
-							alt='revolution'
-							className='rounded-t-md object-cover h-2/4 hover:scale-100 transition-all'
-						/>
-						<div className='flex justify-between w-full absolute top-[45%] px-6'>
-							<h2 className='bg-gray-600 rounded-full py-1 px-5 text-white font-semibold'>
-								xzvetal
-							</h2>
-							<div className='bg-gray-600 rounded-full'>1</div>
-						</div>
-						<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
-							<h2 className='text-white font-semibold text-xl hover:text-yellow-400 transition-all w-fit'>
-								Хто ти з революціонерів?
-							</h2>
-							<p className='text-gray-300 text-sm'>
-								За всю історію людства сталось не мало революцій і повстань. Я
-								зібрав найрізноплановіших лідерів повстань и пропоную дізнатись,
-								на кого ви більше схожі.
-							</p>
-						</div>
-					</li>
-					<li className='bg-gray-900 w-[24%] h-96 rounded-md'>
-						<Image
-							src='/tolkin.jpg'
-							width={350}
-							height={350}
-							alt='revolution'
-							className='rounded-t-md object-cover h-2/4'
-						/>
-						<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
-							<h2 className='text-white font-semibold text-xl'>
-								Хто ти з революціонерів?
-							</h2>
-							<p className='text-gray-300 text-sm'>
-								За всю історію людства сталось не мало революцій і повстань. Я
-								зібрав найрізноплановіших лідерів повстань и пропоную дізнатись,
-								на кого ви більше схожі.
-							</p>
-						</div>
-					</li>
-					<li className='bg-gray-900 w-[24%] h-96 rounded-md'>
-						<Image
-							src='/genre.jpg'
-							width={350}
-							height={350}
-							alt='revolution'
-							className='rounded-t-md object-cover h-2/4'
-						/>
-						<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
-							<h2 className='text-white font-semibold text-xl'>
-								Хто ти з революціонерів?
-							</h2>
-							<p className='text-gray-300 text-sm'>
-								За всю історію людства сталось не мало революцій і повстань. Я
-								зібрав найрізноплановіших лідерів повстань и пропоную дізнатись,
-								на кого ви більше схожі.
-							</p>
-						</div>
-					</li>
-					<li className='bg-gray-900 w-[24%] h-96 rounded-md'>
-						<Image
-							src='/rdd2.jpg'
-							width={350}
-							height={350}
-							alt='revolution'
-							className='rounded-t-md object-cover h-2/4'
-						/>
-						<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
-							<h2 className='text-white font-semibold text-xl'>
-								Хто ти з революціонерів?
-							</h2>
-							<p className='text-gray-300 text-sm'>
-								За всю історію людства сталось не мало революцій і повстань. Я
-								зібрав найрізноплановіших лідерів повстань и пропоную дізнатись,
-								на кого ви більше схожі.
-							</p>
-						</div>
-					</li>
-					<li className='bg-gray-900 w-[24%] h-96 rounded-md'>
-						<Image
-							src='/twitch.jpg'
-							width={350}
-							height={350}
-							alt='revolution'
-							className='rounded-t-md object-cover h-2/4'
-						/>
-						<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
-							<h2 className='text-white font-semibold text-xl'>
-								Хто ти з революціонерів?
-							</h2>
-							<p className='text-gray-300 text-sm'>
-								За всю історію людства сталось не мало революцій і повстань. Я
-								зібрав найрізноплановіших лідерів повстань и пропоную дізнатись,
-								на кого ви більше схожі.
-							</p>
-						</div>
-					</li>
+					{tests.map((test, key) => (
+						<li
+							className='bg-gray-900 w-[24%] h-96 rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative'
+							key={key}
+						>
+							<Image
+								src={test.src}
+								width={350}
+								height={350}
+								alt='revolution'
+								className='rounded-t-md object-cover h-2/4 hover:scale-100 transition-all'
+							/>
+							<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
+								<h2 className='text-white font-semibold text-xl hover:text-yellow-400 transition-all w-fit'>
+									{test.h}
+								</h2>
+								<p className='text-gray-300 text-sm'>{test.p}</p>
+							</div>
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>
