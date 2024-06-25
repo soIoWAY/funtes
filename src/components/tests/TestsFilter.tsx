@@ -1,6 +1,13 @@
 import { tests } from '@/content/tests'
 import Image from 'next/image'
-import { FaRegTrashAlt, FaSearch } from 'react-icons/fa'
+import {
+	FaCompass,
+	FaRegTrashAlt,
+	FaSearch,
+	FaUserFriends,
+} from 'react-icons/fa'
+import { GiDiabloSkull, GiStrawberry } from 'react-icons/gi'
+import { PiLightning } from 'react-icons/pi'
 const TestsFilter = () => {
 	const liStyle =
 		'bg-gray-900 py-3 w-32 text-center uppercase text-white text-sm font-semibold hover:shadow-custom-border'
@@ -28,25 +35,51 @@ const TestsFilter = () => {
 					</button>
 				</div>
 			</div>
-			<div>
+			<div className='pb-3'>
 				<ul className='flex gap-4 flex-wrap'>
 					{tests.map((test, key) => (
 						<li
-							className='bg-gray-900 w-[24%] h-96 rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative'
+							className='bg-gray-900 w-[24%] h-[440px] rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative flex flex-col justify-between'
 							key={key}
 						>
-							<Image
-								src={test.src}
-								width={350}
-								height={350}
-								alt='revolution'
-								className='rounded-t-md object-cover h-2/4 hover:scale-100 transition-all'
-							/>
-							<div className='flex flex-col gap-3 px-3 py-2 h-2/4'>
-								<h2 className='text-white font-semibold text-xl hover:text-yellow-400 transition-all w-fit'>
-									{test.h}
-								</h2>
-								<p className='text-gray-300 text-sm'>{test.p}</p>
+							<div className='h-5/6'>
+								<Image
+									src={test.src}
+									width={350}
+									height={350}
+									alt='revolution'
+									className='rounded-t-md object-cover h-3/6 hover:scale-100 transition-all'
+								/>
+								<div className='flex flex-col gap-3 px-3 py-2 h-3/6'>
+									<h2 className='text-white font-semibold text-xl hover:text-yellow-400 transition-all w-fit'>
+										{test.h}
+									</h2>
+									<p className='text-gray-300 text-sm'>{test.p}</p>
+								</div>
+							</div>
+							<div className='flex justify-between items-center h-fit px-3 border-t border-gray-700 text-white font-semibold py-2 text-sm'>
+								<div className='flex gap-3'>
+									<div className='flex items-center gap-1'>
+										<PiLightning className='text-xl fill-gray-500' />
+										<span>9.72</span>
+									</div>
+									<div className='flex items-center gap-1'>
+										<FaUserFriends className='text-xl fill-gray-500' />
+										<span>795</span>
+									</div>
+									<div className='flex items-center gap-1'>
+										<FaCompass className='text-xl fill-gray-500' />
+										<span>10</span>
+									</div>
+								</div>
+								<div className='flex gap-3 text-xl items-center text-gray-500'>
+									<span>
+										<GiStrawberry />
+									</span>
+									<span>
+										<GiDiabloSkull />
+									</span>
+								</div>
 							</div>
 						</li>
 					))}
