@@ -13,6 +13,18 @@ const config: Config = {
 				'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
+			boxShadow: {
+				'custom-border': '0 0 3px 3px rgba(250, 204, 21, 0.9)',
+			},
+			animation: {
+				'border-pulse': 'borderPulse 3s infinite',
+			},
+			keyframes: {
+				borderPulse: {
+					'0%, 100%': { boxShadow: '0 0 3px 3px rgba(250, 204, 21, 1)' },
+					'50%': { boxShadow: '0 0 3px 3px rgba(250, 204, 21, 0.0)' },
+				},
+			},
 		},
 	},
 	plugins: [],
