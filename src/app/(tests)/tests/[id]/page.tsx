@@ -1,5 +1,6 @@
 import { tests } from '@/content/tests'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
 	FaArrowLeft,
 	FaCrown,
@@ -23,10 +24,10 @@ const TestDetail = ({ params }: { params: { id: string } }) => {
 	return (
 		<div className='w-2/6 m-auto'>
 			<div className='mt-5 flex justify-between items-center text-gray-200 text-sm font-semibold'>
-				<button className='flex items-center gap-2 uppercase'>
+				<Link href='/tests' className='flex items-center gap-2 uppercase'>
 					<FaArrowLeft className='text-lg' />
 					<span className='hover:text-yellow-400 transition-all'>Назад</span>
-				</button>
+				</Link>
 				<button className='uppercase flex items-center gap-2'>
 					<span className='hover:text-yellow-400 transition-all'>
 						Статистика

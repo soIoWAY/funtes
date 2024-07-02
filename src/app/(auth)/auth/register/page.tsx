@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { CiMail } from 'react-icons/ci'
 import { FaKey, FaRegUser } from 'react-icons/fa'
 import { MdOutlineTaskAlt } from 'react-icons/md'
@@ -35,7 +36,9 @@ export default function RegisterPage() {
 			</div>
 			<div className='w-4/12 bg-gray-700 px-16 py-20'>
 				<div className='font-bold text-2xl flex gap-9'>
-					<span className='text-gray-300'>Вхід</span>
+					<Link href='/auth' className='text-gray-300'>
+						Вхід
+					</Link>
 					<span className='text-yellow-400'>Реєстрація </span>
 				</div>
 				<form className='mt-8 flex flex-col gap-5 w-full'>

@@ -1,5 +1,6 @@
 import { tests } from '@/content/tests'
 import Image from 'next/image'
+import Link from 'next/link'
 const ActualTests = () => {
 	return (
 		<div className='w-11/12 m-auto mt-16 mb-3'>
@@ -12,15 +13,18 @@ const ActualTests = () => {
 						Найбільш оцінені тести від наших авторів за тиждень.
 					</p>
 				</div>
-				<button className='bg-gray-900 text-gray-300 px-5 py-4 rounded-md uppercase font-semibold text-sm hover:text-yellow-400 transition-all'>
+				<Link
+					href='/tests'
+					className='bg-gray-900 text-gray-300 px-5 py-4 rounded-md uppercase font-semibold text-sm hover:text-yellow-400 transition-all'
+				>
 					Всі тести
-				</button>
+				</Link>
 			</div>
 			<div className='mt-5 w-full'>
 				<ul className='flex gap-4 flex-wrap '>
 					{tests.map((test, key) => (
 						<li
-							className='bg-gray-900 w-[24%] h-96 rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative'
+							className='bg-gray-900 w-[24%] h-96 rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative hover:scale-105'
 							key={key}
 						>
 							<Image

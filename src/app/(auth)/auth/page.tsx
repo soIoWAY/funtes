@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FaKey, FaRegUser } from 'react-icons/fa'
 
 export default function LoginPage() {
@@ -17,7 +18,9 @@ export default function LoginPage() {
 			<div className='w-4/12 bg-gray-700 px-16 py-20'>
 				<div className='font-bold text-2xl flex gap-9'>
 					<span className='text-yellow-400'>Вхід</span>
-					<span className='text-gray-300'>Реєстрація </span>
+					<Link href='/auth/register' className='text-gray-300'>
+						Реєстрація{' '}
+					</Link>
 				</div>
 				<form className='mt-8 flex flex-col gap-5 w-full'>
 					<div className='flex items-center bg-[#192833] w-full rounded-md px-3 py-4'>
