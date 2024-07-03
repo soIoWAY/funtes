@@ -1,4 +1,4 @@
-import Footer from '@/components/main/Footer'
+import Footer from '@/components/main/footer/Footer'
 import Header from '@/components/main/header/Header'
 
 interface ITestsLayout {
