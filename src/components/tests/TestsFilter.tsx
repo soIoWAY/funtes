@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fa'
 import { GiDiabloSkull, GiStrawberry } from 'react-icons/gi'
 import { PiLightning } from 'react-icons/pi'
+
 const TestsFilter = () => {
 	const liStyle =
 		'bg-gray-900 py-3 w-32 text-center uppercase text-white text-sm font-semibold hover:shadow-custom-border'

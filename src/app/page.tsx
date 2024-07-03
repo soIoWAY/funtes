@@ -1,6 +1,6 @@
 import ActualTests from '@/components/main/ActualTests'
 import Footer from '@/components/main/Footer'
-import Header from '@/components/main/Header'
+import Header from '@/components/main/header/Header'
 import Hero from '@/components/main/Hero'
 
 export default function Home() {
