@@ -28,7 +28,7 @@ const Navbar = () => {
 	const liStyles =
 		'flex items-center gap-2 hover:text-yellow-400 cursor-pointer transition-all'
 	return (
-		<nav>
+		<nav className='hidden sm:block'>
 			<ul className='flex gap-10 text-white uppercase font-semibold'>
 				{navLinks.map((link, index) => (
 					<li key={index}>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
 import { IoIosStats } from 'react-icons/io'
 
-const TestHeader = () => {
+const PrevHeader = () => {
 	return (
 		<div className='mt-5 flex justify-between items-center text-gray-200 text-sm font-semibold'>
 			<Link href='/tests' className='flex items-center gap-2 uppercase'>
@@ -17,4 +17,4 @@ const TestHeader = () => {
 	)
 }
 
-export default TestHeader
+export default PrevHeader

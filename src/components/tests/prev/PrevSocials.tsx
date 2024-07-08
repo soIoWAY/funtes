@@ -1,6 +1,6 @@
 import { FaInstagram, FaRegCopy, FaTelegram } from 'react-icons/fa'
 
-const TestSocials = () => {
+const PrevSocials = () => {
 	return (
 		<div className='flex gap-3 mb-3'>
 			<button className='bg-sky-400 p-1 rounded-md border-4 border-sky-600'>
@@ -16,4 +16,4 @@ const TestSocials = () => {
 	)
 }
 
-export default TestSocials
+export default PrevSocials

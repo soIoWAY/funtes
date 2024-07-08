@@ -19,7 +19,7 @@ const Tests = () => {
 							key={key}
 						>
 							<div className='h-5/6'>
-								<Link href={`/tests/${test.id}`}>
+								<Link href={`/tests/prev/${test.id}`}>
 									<Image
 										src={test.src}
 										width={350}
@@ -35,7 +35,7 @@ const Tests = () => {
 									>
 										{test.h}
 									</Link>
-									<p className='text-gray-300 text-sm'>{test.p}</p>L
+									<p className='text-gray-300 text-sm'>{test.p}</p>
 								</div>
 							</div>
 							<div className='flex justify-between items-center h-fit px-3 border-t border-gray-700 text-white font-semibold py-2 text-sm'>
@@ -65,7 +65,6 @@ const Tests = () => {
 						</li>
 					))}
 				</ul>
-				T
 			</div>
 		</div>
 	)
