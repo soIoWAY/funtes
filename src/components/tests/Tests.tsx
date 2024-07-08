@@ -15,7 +15,7 @@ const Tests = () => {
 				<ul className='flex gap-4 flex-wrap'>
 					{tests.map((test, key) => (
 						<li
-							className='bg-gray-900 w-[24%] h-[440px] rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative flex flex-col justify-between hover:scale-105'
+							className='bg-gray-900 w-full sm:w-[24%] h-[440px] rounded-md hover:shadow-custom-border hover:bg-gray-950 transition-all relative flex flex-col justify-between hover:scale-105'
 							key={key}
 						>
 							<div className='h-5/6'>
@@ -30,7 +30,7 @@ const Tests = () => {
 								</Link>
 								<div className='flex flex-col gap-3 px-3 py-2 h-3/6'>
 									<Link
-										href={`/tests/${test.id}`}
+										href={`/tests/prev/${test.id}`}
 										className='text-white font-semibold text-xl hover:text-yellow-400 transition-all w-fit'
 									>
 										{test.h}

@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 const TestDetail = ({ params }: { params: { id: string } }) => {
 	const test = tests.find(test => test.id.toString() === params.id)
 	return (
-		<div className='w-3/6 m-auto py-2'>
+		<div className='w-full sm:w-3/6 m-auto py-2'>
 			<TestHeader testName={test?.h || ''} />
 			<TestQuestions />
 		</div>

@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 const TestPrev = ({ params }: { params: { id: string } }) => {
 	const test = tests.find(test => test.id.toString() === params.id)
 	return (
-		<div className='w-2/6 m-auto'>
+		<div className='w-full sm:w-2/6 m-auto'>
 			<PrevHeader />
 			<div className='flex justify-center flex-col items-center mt-5 mb-9 bg-gray-900 rounded-b-md rounded-t-md'>
 				<Image
