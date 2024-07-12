@@ -4,9 +4,12 @@ const ActualTestsHeader = () => {
 	return (
 		<div className='flex justify-between items-center'>
 			<div className='flex flex-col gap-3'>
-				<h2 className='text-white text-lg sm:text-3xl font-bold tracking-wider hover:text-yellow-400 w-fit transition-all'>
+				<Link
+					href='/tests'
+					className='text-white text-lg sm:text-3xl font-bold tracking-wider hover:text-yellow-400 w-fit transition-all'
+				>
 					Актуальні тести <span className='text-yellow-400'>{'>'}</span>
-				</h2>
+				</Link>
 				<p className='text-gray-300'>
 					Найбільш оцінені тести від наших авторів за тиждень.
 				</p>
