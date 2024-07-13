@@ -12,8 +12,14 @@ const TestDetail = ({ params }: { params: { id: string } }) => {
 	const test = tests.find(test => test.id.toString() === params.id)
 	return (
 		<div className='w-full sm:w-3/6 m-auto py-2'>
-			<TestHeader testName={test?.h || ''} />
-			<TestQuestions />
+			<TestHeader
+				testName={test?.h || ''}
+				questionQuantity={test?.questions.length || 0}
+			/>
+			<TestQuestions
+				questions={test?.questions || [{ id: 1, text: '', answers: [] }]}
+				characters={test?.characters || { 0: { name: '', img: '' } }}
+			/>
 		</div>
 	)
 }

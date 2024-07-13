@@ -3,14 +3,15 @@ import { FaHome } from 'react-icons/fa'
 
 interface ITestHeader {
 	testName: string
+	questionQuantity: number
 }
 
-const TestHeader = ({ testName }: ITestHeader) => {
+const TestHeader = ({ testName, questionQuantity }: ITestHeader) => {
 	return (
 		<div className='flex justify-between items-center text-white py-2 text-lg px-3 sm:px-0'>
 			<div className='flex gap-5 items-center'>
 				<h3 className=' font-semibold'>Funtes - {testName}</h3>
-				<span>Питання: 1/10</span>
+				<span>Питання: 1/{questionQuantity}</span>
 			</div>
 			<div>
 				<Link

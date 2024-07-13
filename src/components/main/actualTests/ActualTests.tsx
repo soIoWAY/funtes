@@ -33,7 +33,7 @@ const ActualTests = () => {
 			<div className='bg-gray-900 w-full mt-3 text-center rounded-md '>
 				<Link
 					href='/tests'
-					className='py-3 block bg-gray-900 text-center text-sm mt-2 text-white  active:text-yellow-400 font-semibold uppercase'
+					className='block sm:hidden py-3 bg-gray-900 text-center text-sm mt-2 text-white  active:text-yellow-400 font-semibold uppercase'
 				>
 					Всі тести
 				</Link>
